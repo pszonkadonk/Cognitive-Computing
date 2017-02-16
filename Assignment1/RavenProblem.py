@@ -10,16 +10,16 @@ class RavenProblem:
 
     def createProblem(fileName):
         matrix = filereader.parseMatrixFile(fileName)
-        problem = []
-        solutions = []
+        problem = {}
+        solutions = {}
         
         for sequence in matrix:
             if(sequence[0] == 'A' or sequence[0] == 'B' or sequence[0] == 'C'):
-                ravenTestShape = RavenObject(sequence[0],  sequence[1].split(":")[1], sequence[2].split(":")[1])
-                problem.append(ravenTestShape)
+                imageId = sequence[0]
+                problem[imageId] = RavenObject(imageId, sequence[1],  sequence[2].split(":")[1], sequence[3].split(":")[1])
             elif(sequence[0] == '1' or sequence[0] == '2' or sequence[0] == '3' or sequence[0] == '4' or sequence[0] == '5' or sequence[0] == '6'):
-                ravenSolutionShape = RavenObject(sequence[0],  sequence[1].split(":")[1], sequence[2].split(":")[1])
-                solutions.append(ravenSolutionShape)
+                imageId = sequence[0]
+                solutions[imageId] = RavenObject(imageId, sequence[1],  sequence[2].split(":")[1], sequence[3].split(":")[1])
 
         return RavenProblem(problem, solutions)
 
