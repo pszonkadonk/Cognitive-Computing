@@ -1,5 +1,8 @@
 import filereader
 
+"""
+Representation of an image in the Ravens matrix
+"""
 class RavenObject:
     
     def __init__(self, imageTag, name, shape, fill):
@@ -14,7 +17,6 @@ class RavenProblem:
     def __init__(self, test, solutions):
         self.test = test
         self.solutions = solutions
-        
 
     def createProblem(fileName):
         matrix = filereader.parseMatrixFile(fileName)
@@ -33,4 +35,7 @@ class RavenProblem:
 
     
 
-                
+"""
+Pass file through parseMatrixFile and return an array which can be further parsed into a matrix, seperating the test 
+images from proposed solutions
+"""              
