@@ -1,5 +1,13 @@
 import filereader
-from RavenObject import RavenObject
+
+class RavenObject:
+    
+    def __init__(self, imageTag, name, shape, fill):
+        self.imageTag = imageTag
+        self.name = name
+        self.shape = shape
+        self.fill = fill
+
 
 class RavenProblem:
 
