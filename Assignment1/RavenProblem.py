@@ -18,6 +18,10 @@ class RavenProblem:
         self.test = test
         self.solutions = solutions
 
+# Pass file through parseMatrixFile and return an array which
+# can be further parsed into a matrix, seperating the test
+# images from proposed solutions
+
     def createProblem(fileName):
         matrix = filereader.parseMatrixFile(fileName)
         problem = {}
@@ -35,7 +39,3 @@ class RavenProblem:
 
     
 
-"""
-Pass file through parseMatrixFile and return an array which can be further parsed into a matrix, seperating the test 
-images from proposed solutions
-"""              
