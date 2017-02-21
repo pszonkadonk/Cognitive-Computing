@@ -26,6 +26,10 @@ def capture_shape(file_name, figures):
     
     return raven_object, figures
 
+"""Given the edges, return the correct
+    shape as a string
+"""
+
 def get_shape(edges):
       if(edges == 3):
         return "triangle"
@@ -35,6 +39,12 @@ def get_shape(edges):
         return "circle"
       else:
         return None
+
+""" Search for the value for
+    the pixel as the center of the
+    shape and based on it's value,
+    return if the shape is filled or not
+"""
 
 def is_filled(image):
     width, height = image.shape[0], image.shape[1]
