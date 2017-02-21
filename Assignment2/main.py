@@ -9,24 +9,26 @@ def main():
     tests = {}
     solutions = {}
 
+    ravens_problem = RavenProblem(tests, solutions)
+
+
     #test figures
-    imageA, tests = processShapes.capture_shape("shapes/A.png", tests)
-    imageB, tests = processShapes.capture_shape("shapes/B.png", tests)
-    imageC, tests = processShapes.capture_shape("shapes/C.png", tests)
+    imageA, ravens_problem.tests = processShapes.capture_shape("shapes/A.png", ravens_problem.test)
+    imageB, ravens_problem.tests = processShapes.capture_shape("shapes/B.png", ravens_problem.test)
+    imageC, ravens_problem.tests = processShapes.capture_shape("shapes/C.png", ravens_problem.test)
 
     #solution figures 
-    image1, solutions = processShapes.capture_shape("shapes/1.png", solutions)
-    image2, solutions = processShapes.capture_shape("shapes/2.png", solutions)
-    image3, solutions = processShapes.capture_shape("shapes/3.png", solutions)
-    image4, solutions = processShapes.capture_shape("shapes/4.png", solutions)
-    image5, solutions = processShapes.capture_shape("shapes/5.png", solutions)
-    image6, solutions = processShapes.capture_shape("shapes/6.png", solutions)
+    image1, ravens_problem.solutions = processShapes.capture_shape("shapes/1.png", ravens_problem.solutions)
+    image2, ravens_problem.solutions = processShapes.capture_shape("shapes/2.png", ravens_problem.solutions)
+    image3, ravens_problem.solutions = processShapes.capture_shape("shapes/3.png", ravens_problem.solutions)
+    image4, ravens_problem.solutions = processShapes.capture_shape("shapes/4.png", ravens_problem.solutions)
+    image5, ravens_problem.solutions = processShapes.capture_shape("shapes/5.png", ravens_problem.solutions)
+    image6, ravens_problem.solutions = processShapes.capture_shape("shapes/6.png", ravens_problem.solutions)
 
-    ravens_problem = RavenProblem(tests, solutions)
 
     target = SemanticNetwork.create_network(imageA, imageB)
 
-    agent.solve(target, imageC, solutions)
+    agent.solve(target, imageC, ravens_problem.solutions)
 
 
 

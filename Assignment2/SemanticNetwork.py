@@ -1,7 +1,7 @@
 from RavenProblem import RavenObject
 
 """
-A node in a semantic network representing the shape and name of the image (I.E 'Z')
+A node in a semantic network representing the shape in the image
 """
 
 class Node:
