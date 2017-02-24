@@ -1,3 +1,6 @@
+# Michael Pszonka
+# Assignment 1
+
 import agent
 from RavenProblem import RavenProblem, RavenObject
 from SemanticNetwork import SemanticNetwork, Node
